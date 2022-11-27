@@ -11,15 +11,14 @@ let pokemons = [
     {id: 10, name: "evee", type: "normal", base_damage: 10, base_hp: 12, speed: 30},
 ]
 
-
 //.9 Crear una lista desordenada de Pokemons en nuestro documento HTML
 
 const root = document.getElementById("root")
-const parrafo = document.createElement('p')
-parrafo.textContent = "Hola Mundo"
-parrafo.style.color = "white"
+const ul = document.createElement('ul')
+root.append(ul)
 
-root.style.backgroundColor="red"
-root.style.width = "300px"
-root.style.height="300px"
-console.log(root)
+pokemons.forEach(pokemon =>{
+    const li = document.createElement('li')
+    li.textContent = pokemon.name
+    ul.append(li)
+})
