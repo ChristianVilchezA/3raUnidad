@@ -11,4 +11,105 @@ let pokemons = [
     {id: 10, name: "evee", type: "normal", base_damage: 10, base_hp: 12, speed: 30},
 ]
 
-//10. Utilizando javascript crear una tabla de pokemons con las siguientes 
+//10. Utilizando javascript crear una tabla de pokemons con las siguientes columnas: id, name, type, base_damage, base_hp, speed
+
+const root = document.getElementById("root")
+const table = document.createElement('table')
+table.classList.add("default")
+table.setAttribute("border", "3")
+
+root.append(table)
+
+const tr = document.createElement('tr')
+table.append(tr)
+
+//HEADERS
+
+let headers = Object.keys(pokemons[0])
+//console.log(headers)
+
+for(index in headers){
+    const th = document.createElement("th")
+    th.textContent = headers[index]
+   // console.log (th)
+    tr.append(th)
+}
+
+
+//TABLE BODY
+for (let i=0; i<pokemons.length; i++ ){
+    const trb = document.createElement("tr")
+    const values = Object.values(pokemons[i])
+
+    pokemons[i]
+    console.log(pokemons[i])
+
+    for (let j=0; j < values.length; j++){
+        const tdb = document.createElement("td")
+        tdb.textContent = values[j]
+        trb.append(tdb)
+    }
+    table.append(trb)
+   // console.log (values)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+const root = document.getElementById("root")
+const table = document.createElement("table")
+table.classList.add("default")
+table.setAttribute("border", "3")
+root.append(table)
+ 
+// COLUMNAS
+ 
+const tr = document.createElement("tr")
+ 
+table.append(tr)
+for(const prop in pokemons[0]){
+    const th = document.createElement("th")
+   
+    th.textContent = prop
+    th.style.cursor = "pointer"
+    th.addEventListener("click", () => {
+        sortPokemons(prop)
+        table.innerHTML = ""
+        table.append(tr)
+        createTableBody()
+    })
+    tr.append(th)
+}
+ 
+ 
+ 
+// TABLE BODY
+function createTableBody(){
+    for(const index in pokemons){
+        const trb = document.createElement("tr")
+        for(const prop in pokemons[index]){
+            const td = document.createElement("td")
+            td.textContent = pokemons[index][prop]
+            trb.append(td)
+        }
+        table.append(trb)
+    }
+}
+ */

@@ -12,4 +12,59 @@ let pokemons = [
 ]
 
 
-//12. Corrige la function sortPokemon para que acepte ordenarlos se
+//12. Corrige la function sortPokemons para que acepte ordenarlos segun id y name.
+
+function sortPokemons(argument){
+    let validInput = ["name","id", "type", "base_damage", "base_hp", "speed"]
+
+    if(validInput.includes(argument)){
+       (argument === "type" || argument === "name") ? (pokemons.sort((a,b) => a[argument].localeCompare(b[argument]))) : (pokemons.sort ((a,b) => a[argument] - b[argument]))
+    } else {
+        console.log("Debes ingresar un argumento valido!")
+    }
+}
+
+const root = document.getElementById("root")
+const table = document.createElement('table')
+table.classList.add("default")
+table.setAttribute("border", "3")
+
+root.append(table)
+
+const tr = document.createElement('tr')
+table.append(tr)
+
+//HEADERS
+
+for(const property in pokemons[0]){
+    const th = document.createElement("th")
+    th.textContent = property
+    th.style.cursor = "pointer"
+    th.addEventListener("click", (e) => {
+        e.preventDefault()
+        sortPokemons (property)
+        table.innerHTML=""
+        table.append(tr)
+        renderBody()
+    })
+    tr.append(th) 
+}
+
+//TABLE BODY
+
+function renderBody(){
+    for (let i=0; i<pokemons.length; i++ ){
+        const trb = document.createElement("tr")
+        const values = Object.values(pokemons[i])
+    
+        pokemons[i]
+        console.log(pokemons[i])
+    
+        for (let j=0; j < values.length; j++){
+            const tdb = document.createElement("td")
+            tdb.textContent = values[j]
+            trb.append(tdb)
+        }
+        table.append(trb)
+    }
+}
