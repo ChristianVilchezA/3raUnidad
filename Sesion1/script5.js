@@ -11,9 +11,15 @@ let pokemons = [
     {id: 10, name: "evee", type: "normal", base_damage: 10, base_hp: 12, speed: 30},
 ]
 
-
 /*5. Crear una funcion que de manera aleatoria agregue un nuevo pokemon al atributo
  pokemon de Pokemon Master.*/
+
+ let pokemonMaster = {
+    id: 1,
+    name: "omar",
+    created_date: "22/11/22 07:00",
+    pokemon: []
+}
 
  function addRandomPokemon(){
     const aleatorio = Math.floor(Math.random()*pokemons.length)

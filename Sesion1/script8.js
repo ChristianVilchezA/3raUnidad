@@ -12,5 +12,25 @@ let pokemons = [
 ]
 
 
-//8. Nuestro Pokemon Master quiere estar preparado para pelear, para ello necesita que lo apoyes a ordenar sus pokemons. El quiere que sus pokemons se ordenen de manera
-// que el que tenga un mayor valor posible de base_damage + max_damage sea el que este primero en la lista y asi sucesivamente.
+//8. Nuestro Pokemon Master quiere estar preparado para pelear, para ello necesita que lo apoyes
+// a ordenar sus pokemons. El quiere que sus pokemons se ordenen de manera
+// que el que tenga un mayor valor posible de base_damage + max_damage sea el que este primero 
+//en la lista y asi sucesivamente.
+
+let pokemonMaster = {
+    id: 1,
+    name: "Picachu",
+    created_date: "22/11/22 07:00",
+    pokemon: []
+}
+
+function SumaDamage(){
+    for (let i = 0; i<pokemons.length; i++){
+        pokemons[i]['min_damage'] = Math.floor(Math.random() * (2 - 1 + 1) + 1)
+        pokemons[i]['max_damage'] = Math.floor(Math.random() * (5 - 3 + 1) + 3)  
+        pokemons[i]['total_damage']= pokemons[i]["base_damage"] + pokemons[i]['max_damage']
+    }
+    pokemons.sort((a,b) => b.total_damage - a.total_damage)
+    pokemonMaster.pokemon.push(pokemons)
+    console.log(pokemonMaster)
+}

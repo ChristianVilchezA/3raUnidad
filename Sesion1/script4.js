@@ -11,13 +11,12 @@ let pokemons = [
     {id: 10, name: "evee", type: "normal", base_damage: 10, base_hp: 12, speed: 30},
 ]
 
-
 /*4. Crear un objeto llamado Pokemon Master que tenga los siguientes atributos: 
 id: number, name: string, created_date: string, y pokemon: array of objects.*/
 
 let pokemonMaster = {
     id: 1,
     name: "omar",
-    created_date: "22/11/22",
+    created_date: "22/11/22 07:00",
     pokemon: []
 }

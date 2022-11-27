@@ -16,7 +16,6 @@ a nuestro arreglo de pokemons teniendo en cuenta lo siguiente:
 min_damage debe ser un numero entero aleatorio entre 1 y 2 y 
 max_damage debe ser un numero entero aleatorio entre 3 y 5*/
 
-
 function addAtributes(){
 
     for (let i = 0; i<pokemons.length; i++){
@@ -25,4 +24,3 @@ function addAtributes(){
     }
   console.log(pokemons)
 }
-

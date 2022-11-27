@@ -13,14 +13,13 @@ let pokemons = [
 
 /*3. Crear una funcion que filtre el objeto pokemons y devuelva un arreglo con los pokemons filtrados.
  La funcion debe aceptar un argumento para filtrar por type de pokemon.*/
-
-
-function filterpokemons (argument){
+ 
+/*function filterpokemons (argument){
    console.log(pokemons.filter( pokemon => pokemon.type ===argument ))
-}
+}*/
 
 function filterpokemons (argument){
     let filteredPokemons = pokemons.filter( pokemon => pokemon.type ===argument) 
-    let result = filteredPokemons.length === 0 ? "Tipo de Pokemon no encontrado" : filteredPokemon
+    let result = filteredPokemons.length === 0 ? "Tipo de Pokemon no encontrado" : filteredPokemons
     console.log(result)
 }

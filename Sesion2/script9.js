@@ -11,7 +11,15 @@ let pokemons = [
     {id: 10, name: "evee", type: "normal", base_damage: 10, base_hp: 12, speed: 30},
 ]
 
-//1. Ordernar los pokemons por base_damage de menor a mayor.
 
-pokemons.sort((a,b) => a.base_damage - b.base_damage)
-console.log (pokemons)
+//.9 Crear una lista desordenada de Pokemons en nuestro documento HTML
+
+const root = document.getElementById("root")
+const parrafo = document.createElement('p')
+parrafo.textContent = "Hola Mundo"
+parrafo.style.color = "white"
+
+root.style.backgroundColor="red"
+root.style.width = "300px"
+root.style.height="300px"
+console.log(root)

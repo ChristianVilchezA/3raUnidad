@@ -12,18 +12,19 @@ let pokemons = [
 ]
 
 
-//7. Crear una funcion que determine el daño que hara un pokemon elegido de la lista ante una posible pelea, para ello considerar que el daño que hara el pokemon es:
+//7. Crear una funcion que determine el daño que hara un pokemon elegido de la lista 
+//ante una posible pelea, para ello considerar que el daño que hara el pokemon es:
 // daño = base_damage + un valor aleatorio entre el min_damage y el max_damage
  
 function setDamage(index){
     if (index < pokemons.length){
         addAtributes()
-        let selectPokemon = pokemons[index]
-        let total_damage = selectedPokemon.base_damage + Math.floor(Math.random() * (selectedPokemon.max_damage-1+selectedPokemon.min_damage)+selectPokemon.min_damage)
+        let selectedPokemon = pokemons[index]
+        let total_damage = selectedPokemon.base_damage + Math.floor(Math.random() * (selectedPokemon.max_damage-1+selectedPokemon.min_damage)+selectedPokemon.min_damage)
     
         console.log(total_damage)
     } else{
-        console.log(`Pleae enter a number not greaet than ${pokemon.length - 1}`)
+        console.log(`Pleae enter a number not greaet than ${pokemons.length - 1}`)
     }   
 }
         
