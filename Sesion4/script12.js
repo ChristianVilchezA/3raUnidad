@@ -10,12 +10,15 @@ let users = [
     {id: 6, nombre: "Mercedes", apellido: "Sanchez", edad: 35, profesion: "veterinario", created_at: "2022-05-01T22:06:35.864Z"},
 ]
  
-/*
-function ordenarPorFecha(reverse){
-    if {
-
-    } else {
-
+function ordenar(reverse) {
+    for(index in users){
+        users[index].created_at = new Date(users[index].created_at)
     }
-}*/
- 
+    if (reverse === true) {
+        users.sort((a, b) => b["created_at"] - a["created_at"])
+    }else{
+        users.sort((a, b) => a["created_at"] - b["created_at"]) 
+    }
+    console.log(users)
+}
+ordenar(true)
