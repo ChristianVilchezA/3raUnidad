@@ -28,7 +28,6 @@
  
 // OPCIONAL2: Crear un selector que permita filtrar los datos por fecha.
 
-
 const root = document.getElementById("root")
 
 let input = document.createElement("input")
