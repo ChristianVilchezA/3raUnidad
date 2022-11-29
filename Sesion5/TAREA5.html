@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  
+    <title>TAREA 5 - Ejercicio 1</title>
+</head>
+<body>
+    <form name="form1">      
+        <div class="col-md-4 bg-light border-start border-end border-5 border-white">
+
+        <h4 class="h2-custom ps-4 pt-5">Pago a Trabajadores</h4>
+        <label for="nombre" class="form-label"><b>Nombres: </b></label>
+        <input type="text" class="form-control" name="nombre" value="" maxlength="30" required> <br>
+        
+
+        <label for="apellido" class="form-label"><b>Apellidos: </b></label>
+        <input type="text" class="form-control" name="apellido" value="" maxlength="30" required> <br>
+
+        <label for="hora" class="form-label"><b>Horas Trabajadas: </b></label>
+        <input type="text" class="form-control" name="horas" id="horas" maxlength="6" required> <br>
+
+        <label for="categ" class="form-label">  <b>Categoría: </b></label><br>
+        <input type="radio" name="categoria" id="cat1" value="40" class="A - S/40.00"> A - S/40.00 <br>
+        <input type="radio" name="categoria" id="cat2" value="35" class="B - S/35.00"> B - S/35.00 <br>
+        <input type="radio" name="categoria" id="cat3" value="30" class="C - S/30.00"> C - S/30.00 <br>
+
+
+        <label for="servicio" class="form-label"> <b> Años de Servicio: </b></label><br>
+        <input type="radio" name="anioservicio" value="15" class="1 - 3 Años (15%)"> 1 - 3 Años <br>
+        <input type="radio" name="anioservicio" value="20" class="4 - 7 Años (20%)"> 4 - 7 Años <br>
+        <input type="radio" name="anioservicio" value="30" class="8 - 12 Años (30%)"> 8 - 12 Años <br>
+        <input type="radio" name="anioservicio" value="35" class="13 - mas Años (35%)"> 13 - mas Años <br><br>
+
+        <button type="button" class="btn btn-outline-primary" value="calcular" onclick="CalcularSueldo()">Calcular Sueldo</button>
+        <button type="submit" class="btn btn-outline-primary" value="limpiar">Limpiar</button>
+
+        </div> <br>
+    </form>
+    
+    <div id="root"></div>
+    <script src="ejercicio1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>
