@@ -89,7 +89,6 @@ let students = [
 // }
 
 
-
 // 3. Crear una funcion que permita crear un nuevo alumno pidiendo los datos a traves de un prompt al
 // usuario. OJO: Recuerda que el correo es autogenerado. El profile_picture debe ser llenado con la api
 // https://randomuser.me/api/portraits/{gender}/{number}.jpg. Para efectos del ejercicio, dos personas
@@ -106,7 +105,6 @@ let students = [
 //     return students
 // }
  
-
 function crearNuevoElemento(arreglo){
     let attributes = Object.keys(arreglo[0])
     console.log(attributes)
@@ -155,7 +153,6 @@ root.append(respuesta)
 button.addEventListener("click", () => {
     respuesta.textContent =  buscarAlumno(inputParametro.value, inputValor.value)
 })
-
 
 
 

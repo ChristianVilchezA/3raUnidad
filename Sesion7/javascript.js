@@ -75,7 +75,6 @@ form.addEventListener("submit", e=> {
   if (!exp_FirstName.test(FirstName)){
     warnings += `El Primer Nombre no es valido <br>`
     entrar1 = true
-   
   }
   
 
