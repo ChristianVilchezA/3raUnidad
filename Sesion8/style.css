@@ -1,0 +1,26 @@
+.campo{
+    /* border: solid 4px #cece76; */
+    font-weight: 18px;
+    /* padding: 10px; */
+    /* margin-bottom: 35px; */
+    /* width: 300px;  */
+}
+
+.boton{
+    background: #849175;
+    border: solid 0;
+    color: #fff;
+    padding: 10px;
+}
+
+.errores{
+  background: red;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+  color: rgb(236, 221, 221);  
+  display: none; 
+  font-size: 14px;
+  margin-top: -45px;
+  margin-left: 340px;
+  padding: 10px; 
+  position:relative; 
+}
